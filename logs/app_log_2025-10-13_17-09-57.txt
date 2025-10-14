@@ -1,0 +1,66 @@
+[2025-10-13T17:08:36.292Z] Fetching latest incidents from backend...
+[2025-10-13T17:08:36.296Z] Setting up auto-refresh for every 5 minutes.
+[2025-10-13T17:08:37.165Z] Successfully fetched 940 incidents.
+[2025-10-13T17:08:37.208Z] Clearing auto-refresh interval.
+[2025-10-13T17:08:37.212Z] Setting up auto-refresh for every 5 minutes.
+[2025-10-13T17:08:46.344Z] [TOMTOM_USA] Starting sequential fetch for 10 US regions to avoid rate limiting.
+[2025-10-13T17:08:46.344Z] [OHGO] Fetching from: https://jarheads.net/fetch_ohgo.php?endpoint=incidents
+[2025-10-13T17:08:46.344Z] [TEXAS] Fetching from: https://jarheads.net/fetch_texas.php
+[2025-10-13T17:08:46.348Z] Clearing auto-refresh interval.
+[2025-10-13T17:08:46.348Z] Setting up auto-refresh for every 5 minutes.
+[2025-10-13T17:08:46.594Z] [TOMTOM_USA] Fetching from: https://jarheads.net/fetch_tomtom.php?bbox=-125.0,42.0,-114.0,49.0
+[2025-10-13T17:08:46.874Z] [OHGO] DEBUG: Raw response object keys: links, lastUpdated, accecptedFilters, rejectedFilters, totalPageCount, totalResultCount, currentResultCount, results
+[2025-10-13T17:08:46.874Z] [OHGO] Successfully fetched and transformed 0 incidents.
+[2025-10-13T17:08:47.222Z] [TOMTOM_USA] Received non-OK response body: {"error":"Failed to fetch data from the TomTom API.","status":400,"response_body":"{\"detailedError\":{\"code\":\"INVALID_REQUEST\",\"message\":\"Area of 'bbox' parameter is larger than 10,000km2.\"}}"}
+[2025-10-13T17:08:47.222Z] [TOMTOM_USA] ERROR fetching or processing data: HTTP error 400. Response: {"error":"Failed to fetch data from the TomTom API.","status":400,"response_body":"{\"detailedError\":{\"code\":\"INVALID_REQUEST\",\"message\":\"Area of 'bbox' parameter is larger than 10,000km2.\"}}"}
+[2025-10-13T17:08:47.222Z] [TOMTOM_USA] Failed to fetch region -125.0,42.0,-114.0,49.0: HTTP error 400. Response: {"error":"Failed to fetch data from the TomTom API.","status":400,"response_body":"{\"detailedError\":{\"code\":\"INVALID_REQUEST\",\"message\":\"Area of 'bbox' parameter is larger than 10,000km2.\"}}"}
+[2025-10-13T17:08:47.454Z] [TEXAS] Finished transforming 695 incidents.
+[2025-10-13T17:08:47.473Z] [TOMTOM_USA] Fetching from: https://jarheads.net/fetch_tomtom.php?bbox=-114.0,42.0,-102.0,49.0
+[2025-10-13T17:08:47.807Z] [TOMTOM_USA] Received non-OK response body: {"error":"Failed to fetch data from the TomTom API.","status":400,"response_body":"{\"detailedError\":{\"code\":\"INVALID_REQUEST\",\"message\":\"Area of 'bbox' parameter is larger than 10,000km2.\"}}"}
+[2025-10-13T17:08:47.807Z] [TOMTOM_USA] ERROR fetching or processing data: HTTP error 400. Response: {"error":"Failed to fetch data from the TomTom API.","status":400,"response_body":"{\"detailedError\":{\"code\":\"INVALID_REQUEST\",\"message\":\"Area of 'bbox' parameter is larger than 10,000km2.\"}}"}
+[2025-10-13T17:08:47.807Z] [TOMTOM_USA] Failed to fetch region -114.0,42.0,-102.0,49.0: HTTP error 400. Response: {"error":"Failed to fetch data from the TomTom API.","status":400,"response_body":"{\"detailedError\":{\"code\":\"INVALID_REQUEST\",\"message\":\"Area of 'bbox' parameter is larger than 10,000km2.\"}}"}
+[2025-10-13T17:08:48.058Z] [TOMTOM_USA] Fetching from: https://jarheads.net/fetch_tomtom.php?bbox=-102.0,42.0,-89.0,49.0
+[2025-10-13T17:08:48.396Z] [TOMTOM_USA] Received non-OK response body: {"error":"Failed to fetch data from the TomTom API.","status":400,"response_body":"{\"detailedError\":{\"code\":\"INVALID_REQUEST\",\"message\":\"Area of 'bbox' parameter is larger than 10,000km2.\"}}"}
+[2025-10-13T17:08:48.396Z] [TOMTOM_USA] ERROR fetching or processing data: HTTP error 400. Response: {"error":"Failed to fetch data from the TomTom API.","status":400,"response_body":"{\"detailedError\":{\"code\":\"INVALID_REQUEST\",\"message\":\"Area of 'bbox' parameter is larger than 10,000km2.\"}}"}
+[2025-10-13T17:08:48.396Z] [TOMTOM_USA] Failed to fetch region -102.0,42.0,-89.0,49.0: HTTP error 400. Response: {"error":"Failed to fetch data from the TomTom API.","status":400,"response_body":"{\"detailedError\":{\"code\":\"INVALID_REQUEST\",\"message\":\"Area of 'bbox' parameter is larger than 10,000km2.\"}}"}
+[2025-10-13T17:08:48.647Z] [TOMTOM_USA] Fetching from: https://jarheads.net/fetch_tomtom.php?bbox=-89.0,42.0,-73.0,49.0
+[2025-10-13T17:08:48.973Z] [TOMTOM_USA] Received non-OK response body: {"error":"Failed to fetch data from the TomTom API.","status":400,"response_body":"{\"detailedError\":{\"code\":\"INVALID_REQUEST\",\"message\":\"Area of 'bbox' parameter is larger than 10,000km2.\"}}"}
+[2025-10-13T17:08:48.973Z] [TOMTOM_USA] ERROR fetching or processing data: HTTP error 400. Response: {"error":"Failed to fetch data from the TomTom API.","status":400,"response_body":"{\"detailedError\":{\"code\":\"INVALID_REQUEST\",\"message\":\"Area of 'bbox' parameter is larger than 10,000km2.\"}}"}
+[2025-10-13T17:08:48.973Z] [TOMTOM_USA] Failed to fetch region -89.0,42.0,-73.0,49.0: HTTP error 400. Response: {"error":"Failed to fetch data from the TomTom API.","status":400,"response_body":"{\"detailedError\":{\"code\":\"INVALID_REQUEST\",\"message\":\"Area of 'bbox' parameter is larger than 10,000km2.\"}}"}
+[2025-10-13T17:08:49.224Z] [TOMTOM_USA] Fetching from: https://jarheads.net/fetch_tomtom.php?bbox=-125.0,32.0,-114.0,42.0
+[2025-10-13T17:08:49.557Z] [TOMTOM_USA] Received non-OK response body: {"error":"Failed to fetch data from the TomTom API.","status":400,"response_body":"{\"detailedError\":{\"code\":\"INVALID_REQUEST\",\"message\":\"Area of 'bbox' parameter is larger than 10,000km2.\"}}"}
+[2025-10-13T17:08:49.557Z] [TOMTOM_USA] ERROR fetching or processing data: HTTP error 400. Response: {"error":"Failed to fetch data from the TomTom API.","status":400,"response_body":"{\"detailedError\":{\"code\":\"INVALID_REQUEST\",\"message\":\"Area of 'bbox' parameter is larger than 10,000km2.\"}}"}
+[2025-10-13T17:08:49.557Z] [TOMTOM_USA] Failed to fetch region -125.0,32.0,-114.0,42.0: HTTP error 400. Response: {"error":"Failed to fetch data from the TomTom API.","status":400,"response_body":"{\"detailedError\":{\"code\":\"INVALID_REQUEST\",\"message\":\"Area of 'bbox' parameter is larger than 10,000km2.\"}}"}
+[2025-10-13T17:08:49.808Z] [TOMTOM_USA] Fetching from: https://jarheads.net/fetch_tomtom.php?bbox=-114.0,31.0,-102.0,42.0
+[2025-10-13T17:08:50.131Z] [TOMTOM_USA] Received non-OK response body: {"error":"Failed to fetch data from the TomTom API.","status":400,"response_body":"{\"detailedError\":{\"code\":\"INVALID_REQUEST\",\"message\":\"Area of 'bbox' parameter is larger than 10,000km2.\"}}"}
+[2025-10-13T17:08:50.131Z] [TOMTOM_USA] ERROR fetching or processing data: HTTP error 400. Response: {"error":"Failed to fetch data from the TomTom API.","status":400,"response_body":"{\"detailedError\":{\"code\":\"INVALID_REQUEST\",\"message\":\"Area of 'bbox' parameter is larger than 10,000km2.\"}}"}
+[2025-10-13T17:08:50.131Z] [TOMTOM_USA] Failed to fetch region -114.0,31.0,-102.0,42.0: HTTP error 400. Response: {"error":"Failed to fetch data from the TomTom API.","status":400,"response_body":"{\"detailedError\":{\"code\":\"INVALID_REQUEST\",\"message\":\"Area of 'bbox' parameter is larger than 10,000km2.\"}}"}
+[2025-10-13T17:08:50.382Z] [TOMTOM_USA] Fetching from: https://jarheads.net/fetch_tomtom.php?bbox=-102.0,31.0,-89.0,42.0
+[2025-10-13T17:08:50.717Z] [TOMTOM_USA] Received non-OK response body: {"error":"Failed to fetch data from the TomTom API.","status":400,"response_body":"{\"detailedError\":{\"code\":\"INVALID_REQUEST\",\"message\":\"Area of 'bbox' parameter is larger than 10,000km2.\"}}"}
+[2025-10-13T17:08:50.717Z] [TOMTOM_USA] ERROR fetching or processing data: HTTP error 400. Response: {"error":"Failed to fetch data from the TomTom API.","status":400,"response_body":"{\"detailedError\":{\"code\":\"INVALID_REQUEST\",\"message\":\"Area of 'bbox' parameter is larger than 10,000km2.\"}}"}
+[2025-10-13T17:08:50.717Z] [TOMTOM_USA] Failed to fetch region -102.0,31.0,-89.0,42.0: HTTP error 400. Response: {"error":"Failed to fetch data from the TomTom API.","status":400,"response_body":"{\"detailedError\":{\"code\":\"INVALID_REQUEST\",\"message\":\"Area of 'bbox' parameter is larger than 10,000km2.\"}}"}
+[2025-10-13T17:08:50.968Z] [TOMTOM_USA] Fetching from: https://jarheads.net/fetch_tomtom.php?bbox=-89.0,34.0,-75.0,42.0
+[2025-10-13T17:08:51.311Z] [TOMTOM_USA] Received non-OK response body: {"error":"Failed to fetch data from the TomTom API.","status":400,"response_body":"{\"detailedError\":{\"code\":\"INVALID_REQUEST\",\"message\":\"Area of 'bbox' parameter is larger than 10,000km2.\"}}"}
+[2025-10-13T17:08:51.311Z] [TOMTOM_USA] ERROR fetching or processing data: HTTP error 400. Response: {"error":"Failed to fetch data from the TomTom API.","status":400,"response_body":"{\"detailedError\":{\"code\":\"INVALID_REQUEST\",\"message\":\"Area of 'bbox' parameter is larger than 10,000km2.\"}}"}
+[2025-10-13T17:08:51.311Z] [TOMTOM_USA] Failed to fetch region -89.0,34.0,-75.0,42.0: HTTP error 400. Response: {"error":"Failed to fetch data from the TomTom API.","status":400,"response_body":"{\"detailedError\":{\"code\":\"INVALID_REQUEST\",\"message\":\"Area of 'bbox' parameter is larger than 10,000km2.\"}}"}
+[2025-10-13T17:08:51.562Z] [TOMTOM_USA] Fetching from: https://jarheads.net/fetch_tomtom.php?bbox=-102.0,24.0,-89.0,31.0
+[2025-10-13T17:08:51.909Z] [TOMTOM_USA] Received non-OK response body: {"error":"Failed to fetch data from the TomTom API.","status":400,"response_body":"{\"detailedError\":{\"code\":\"INVALID_REQUEST\",\"message\":\"Area of 'bbox' parameter is larger than 10,000km2.\"}}"}
+[2025-10-13T17:08:51.909Z] [TOMTOM_USA] ERROR fetching or processing data: HTTP error 400. Response: {"error":"Failed to fetch data from the TomTom API.","status":400,"response_body":"{\"detailedError\":{\"code\":\"INVALID_REQUEST\",\"message\":\"Area of 'bbox' parameter is larger than 10,000km2.\"}}"}
+[2025-10-13T17:08:51.909Z] [TOMTOM_USA] Failed to fetch region -102.0,24.0,-89.0,31.0: HTTP error 400. Response: {"error":"Failed to fetch data from the TomTom API.","status":400,"response_body":"{\"detailedError\":{\"code\":\"INVALID_REQUEST\",\"message\":\"Area of 'bbox' parameter is larger than 10,000km2.\"}}"}
+[2025-10-13T17:08:52.160Z] [TOMTOM_USA] Fetching from: https://jarheads.net/fetch_tomtom.php?bbox=-89.0,24.0,-75.0,34.0
+[2025-10-13T17:08:52.500Z] [TOMTOM_USA] Received non-OK response body: {"error":"Failed to fetch data from the TomTom API.","status":400,"response_body":"{\"detailedError\":{\"code\":\"INVALID_REQUEST\",\"message\":\"Area of 'bbox' parameter is larger than 10,000km2.\"}}"}
+[2025-10-13T17:08:52.500Z] [TOMTOM_USA] ERROR fetching or processing data: HTTP error 400. Response: {"error":"Failed to fetch data from the TomTom API.","status":400,"response_body":"{\"detailedError\":{\"code\":\"INVALID_REQUEST\",\"message\":\"Area of 'bbox' parameter is larger than 10,000km2.\"}}"}
+[2025-10-13T17:08:52.500Z] [TOMTOM_USA] Failed to fetch region -89.0,24.0,-75.0,34.0: HTTP error 400. Response: {"error":"Failed to fetch data from the TomTom API.","status":400,"response_body":"{\"detailedError\":{\"code\":\"INVALID_REQUEST\",\"message\":\"Area of 'bbox' parameter is larger than 10,000km2.\"}}"}
+[2025-10-13T17:08:52.500Z] [TOMTOM_USA] Successfully fetched data from 0/10 regions.
+[2025-10-13T17:08:52.500Z] [IMPORTER] Starting to post 695 incidents in 5 batches of up to 150.
+[2025-10-13T17:08:52.500Z] [IMPORTER] Posting batch 1/5 with 150 incidents.
+[2025-10-13T17:08:53.135Z] [IMPORTER] Posting batch 2/5 with 150 incidents.
+[2025-10-13T17:08:53.438Z] [IMPORTER] Posting batch 3/5 with 150 incidents.
+[2025-10-13T17:08:53.682Z] [IMPORTER] Posting batch 4/5 with 150 incidents.
+[2025-10-13T17:08:54.315Z] [IMPORTER] Posting batch 5/5 with 95 incidents.
+[2025-10-13T17:08:54.756Z] Fetching latest incidents from backend...
+[2025-10-13T17:08:54.773Z] Clearing auto-refresh interval.
+[2025-10-13T17:08:54.773Z] Setting up auto-refresh for every 5 minutes.
+[2025-10-13T17:08:55.005Z] Successfully fetched 940 incidents.
+[2025-10-13T17:08:55.008Z] Clearing auto-refresh interval.
+[2025-10-13T17:08:55.010Z] Setting up auto-refresh for every 5 minutes.

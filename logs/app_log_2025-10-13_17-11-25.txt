@@ -1,0 +1,52 @@
+[2025-10-13T17:10:07.105Z] --- Log Cleared Manually ---
+[2025-10-13T17:10:41.113Z] [TOMTOM_USA] Starting sequential fetch for 10 US regions to avoid rate limiting.
+[2025-10-13T17:10:41.113Z] [OHGO] Fetching from: https://jarheads.net/fetch_ohgo.php?endpoint=incidents
+[2025-10-13T17:10:41.113Z] [TEXAS] Fetching from: https://jarheads.net/fetch_texas.php
+[2025-10-13T17:10:41.115Z] Clearing auto-refresh interval.
+[2025-10-13T17:10:41.115Z] Setting up auto-refresh for every 5 minutes.
+[2025-10-13T17:10:41.364Z] [TOMTOM_USA] Fetching from: https://jarheads.net/fetch_tomtom.php?bbox=-125.0,42.0,-114.0,49.0
+[2025-10-13T17:10:41.537Z] [TOMTOM_USA] ERROR fetching or processing data: Failed to fetch
+[2025-10-13T17:10:41.537Z] [TOMTOM_USA] Failed to fetch region -125.0,42.0,-114.0,49.0: Failed to fetch
+[2025-10-13T17:10:41.738Z] [OHGO] DEBUG: Raw response object keys: links, lastUpdated, accecptedFilters, rejectedFilters, totalPageCount, totalResultCount, currentResultCount, results
+[2025-10-13T17:10:41.738Z] [OHGO] Successfully fetched and transformed 0 incidents.
+[2025-10-13T17:10:41.789Z] [TOMTOM_USA] Fetching from: https://jarheads.net/fetch_tomtom.php?bbox=-114.0,42.0,-102.0,49.0
+[2025-10-13T17:10:42.124Z] [TOMTOM_USA] ERROR fetching or processing data: Failed to fetch
+[2025-10-13T17:10:42.124Z] [TOMTOM_USA] Failed to fetch region -114.0,42.0,-102.0,49.0: Failed to fetch
+[2025-10-13T17:10:42.255Z] [TEXAS] Finished transforming 695 incidents.
+[2025-10-13T17:10:42.375Z] [TOMTOM_USA] Fetching from: https://jarheads.net/fetch_tomtom.php?bbox=-102.0,42.0,-89.0,49.0
+[2025-10-13T17:10:42.474Z] [TOMTOM_USA] ERROR fetching or processing data: Failed to fetch
+[2025-10-13T17:10:42.474Z] [TOMTOM_USA] Failed to fetch region -102.0,42.0,-89.0,49.0: Failed to fetch
+[2025-10-13T17:10:42.725Z] [TOMTOM_USA] Fetching from: https://jarheads.net/fetch_tomtom.php?bbox=-89.0,42.0,-73.0,49.0
+[2025-10-13T17:10:42.827Z] [TOMTOM_USA] ERROR fetching or processing data: Failed to fetch
+[2025-10-13T17:10:42.827Z] [TOMTOM_USA] Failed to fetch region -89.0,42.0,-73.0,49.0: Failed to fetch
+[2025-10-13T17:10:43.078Z] [TOMTOM_USA] Fetching from: https://jarheads.net/fetch_tomtom.php?bbox=-125.0,32.0,-114.0,42.0
+[2025-10-13T17:10:43.184Z] [TOMTOM_USA] ERROR fetching or processing data: Failed to fetch
+[2025-10-13T17:10:43.184Z] [TOMTOM_USA] Failed to fetch region -125.0,32.0,-114.0,42.0: Failed to fetch
+[2025-10-13T17:10:43.435Z] [TOMTOM_USA] Fetching from: https://jarheads.net/fetch_tomtom.php?bbox=-114.0,31.0,-102.0,42.0
+[2025-10-13T17:10:43.536Z] [TOMTOM_USA] ERROR fetching or processing data: Failed to fetch
+[2025-10-13T17:10:43.536Z] [TOMTOM_USA] Failed to fetch region -114.0,31.0,-102.0,42.0: Failed to fetch
+[2025-10-13T17:10:43.787Z] [TOMTOM_USA] Fetching from: https://jarheads.net/fetch_tomtom.php?bbox=-102.0,31.0,-89.0,42.0
+[2025-10-13T17:10:43.883Z] [TOMTOM_USA] ERROR fetching or processing data: Failed to fetch
+[2025-10-13T17:10:43.883Z] [TOMTOM_USA] Failed to fetch region -102.0,31.0,-89.0,42.0: Failed to fetch
+[2025-10-13T17:10:44.135Z] [TOMTOM_USA] Fetching from: https://jarheads.net/fetch_tomtom.php?bbox=-89.0,34.0,-75.0,42.0
+[2025-10-13T17:10:44.236Z] [TOMTOM_USA] ERROR fetching or processing data: Failed to fetch
+[2025-10-13T17:10:44.236Z] [TOMTOM_USA] Failed to fetch region -89.0,34.0,-75.0,42.0: Failed to fetch
+[2025-10-13T17:10:44.488Z] [TOMTOM_USA] Fetching from: https://jarheads.net/fetch_tomtom.php?bbox=-102.0,24.0,-89.0,31.0
+[2025-10-13T17:10:44.591Z] [TOMTOM_USA] ERROR fetching or processing data: Failed to fetch
+[2025-10-13T17:10:44.591Z] [TOMTOM_USA] Failed to fetch region -102.0,24.0,-89.0,31.0: Failed to fetch
+[2025-10-13T17:10:44.841Z] [TOMTOM_USA] Fetching from: https://jarheads.net/fetch_tomtom.php?bbox=-89.0,24.0,-75.0,34.0
+[2025-10-13T17:10:44.946Z] [TOMTOM_USA] ERROR fetching or processing data: Failed to fetch
+[2025-10-13T17:10:44.947Z] [TOMTOM_USA] Failed to fetch region -89.0,24.0,-75.0,34.0: Failed to fetch
+[2025-10-13T17:10:44.947Z] [TOMTOM_USA] Successfully fetched data from 0/10 regions.
+[2025-10-13T17:10:44.947Z] [IMPORTER] Starting to post 695 incidents in 5 batches of up to 150.
+[2025-10-13T17:10:44.947Z] [IMPORTER] Posting batch 1/5 with 150 incidents.
+[2025-10-13T17:10:45.771Z] [IMPORTER] Posting batch 2/5 with 150 incidents.
+[2025-10-13T17:10:46.031Z] [IMPORTER] Posting batch 3/5 with 150 incidents.
+[2025-10-13T17:10:46.283Z] [IMPORTER] Posting batch 4/5 with 150 incidents.
+[2025-10-13T17:10:46.584Z] [IMPORTER] Posting batch 5/5 with 95 incidents.
+[2025-10-13T17:10:46.845Z] Fetching latest incidents from backend...
+[2025-10-13T17:10:46.846Z] Clearing auto-refresh interval.
+[2025-10-13T17:10:46.846Z] Setting up auto-refresh for every 5 minutes.
+[2025-10-13T17:10:47.036Z] Successfully fetched 940 incidents.
+[2025-10-13T17:10:47.038Z] Clearing auto-refresh interval.
+[2025-10-13T17:10:47.040Z] Setting up auto-refresh for every 5 minutes.

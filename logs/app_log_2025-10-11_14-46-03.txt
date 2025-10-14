@@ -1,0 +1,198 @@
+[2025-10-10T19:02:45.865Z] Fetching latest incidents from backend...
+[2025-10-10T19:02:45.867Z] Setting up auto-refresh for every 5 minutes.
+[2025-10-10T19:02:47.112Z] Successfully fetched 684 incidents.
+[2025-10-10T19:02:47.726Z] Clearing auto-refresh interval.
+[2025-10-10T19:02:47.771Z] Setting up auto-refresh for every 5 minutes.
+[2025-10-10T19:02:55.629Z] Fetching latest incidents from backend...
+[2025-10-10T19:02:55.651Z] Clearing auto-refresh interval.
+[2025-10-10T19:02:55.651Z] Setting up auto-refresh for every 5 minutes.
+[2025-10-10T19:02:56.032Z] Successfully fetched 684 incidents.
+[2025-10-10T19:02:56.085Z] Clearing auto-refresh interval.
+[2025-10-10T19:02:56.130Z] Setting up auto-refresh for every 5 minutes.
+[2025-10-10T19:02:57.047Z] Fetching latest incidents from backend...
+[2025-10-10T19:02:57.064Z] Clearing auto-refresh interval.
+[2025-10-10T19:02:57.064Z] Setting up auto-refresh for every 5 minutes.
+[2025-10-10T19:02:57.280Z] Successfully fetched 684 incidents.
+[2025-10-10T19:02:57.335Z] Clearing auto-refresh interval.
+[2025-10-10T19:02:57.378Z] Setting up auto-refresh for every 5 minutes.
+[2025-10-10T19:03:00.022Z] --- Manual Sync Triggered by User ---
+[2025-10-10T19:03:00.023Z] [OHGO] Fetching from: https://jarheads.net/fetch_ohgo.php
+[2025-10-10T19:03:00.023Z] [TEXAS] Fetching from: https://api.drivetexas.org/api/conditions.geojson
+[2025-10-10T19:03:00.045Z] Clearing auto-refresh interval.
+[2025-10-10T19:03:00.045Z] Setting up auto-refresh for every 5 minutes.
+[2025-10-10T19:03:00.378Z] [OHGO] Raw API response received (New Schema).
+[2025-10-10T19:03:00.379Z] [OHGO] Successfully fetched and transformed 3 incidents.
+[2025-10-10T19:03:00.390Z] [TEXAS] Received non-OK response body: Unauthorized
+[2025-10-10T19:03:00.390Z] [TEXAS] ERROR fetching or processing data: HTTP error 401. Response: Unauthorized This is an authentication error. Please verify that the API key in your server-side proxy script (e.g., fetch_texas.php) is correct and active.
+[2025-10-10T19:03:00.390Z] [IMPORTER] Total incidents transformed: 3. Posting to script: https://jarheads.net/importer.php
+[2025-10-10T19:03:00.663Z] [IMPORTER] Importer response: {"message":"Sync complete. Processed 3 incidents.","stats":{"total_received":3,"inserted":3,"updated":0,"failed":0}}
+[2025-10-10T19:03:00.663Z] Fetching latest incidents from backend...
+[2025-10-10T19:03:00.867Z] Clearing auto-refresh interval.
+[2025-10-10T19:03:00.867Z] Setting up auto-refresh for every 5 minutes.
+[2025-10-10T19:03:00.878Z] Successfully fetched 687 incidents.
+[2025-10-10T19:03:00.997Z] Clearing auto-refresh interval.
+[2025-10-10T19:03:01.043Z] Setting up auto-refresh for every 5 minutes.
+[2025-10-10T19:03:14.130Z] Generating AI summary for incident: DriveTexas_Official-03ED6438-08FF-456A-A308-2C58A5D9C412
+[2025-10-10T19:03:22.562Z] AI summary generated successfully for incident: DriveTexas_Official-03ED6438-08FF-456A-A308-2C58A5D9C412
+[2025-10-10T19:04:34.263Z] Fetching latest incidents from backend...
+[2025-10-10T19:04:34.263Z] Setting up auto-refresh for every 5 minutes.
+[2025-10-10T19:04:34.926Z] Successfully fetched 687 incidents.
+[2025-10-10T19:04:35.528Z] Clearing auto-refresh interval.
+[2025-10-10T19:04:35.571Z] Setting up auto-refresh for every 5 minutes.
+[2025-10-10T19:07:43.841Z] Fetching latest incidents from backend...
+[2025-10-10T19:07:43.841Z] Setting up auto-refresh for every 5 minutes.
+[2025-10-10T19:07:44.476Z] Successfully fetched 687 incidents.
+[2025-10-10T19:07:45.107Z] Clearing auto-refresh interval.
+[2025-10-10T19:07:45.149Z] Setting up auto-refresh for every 5 minutes.
+[2025-10-10T19:12:45.766Z] Performing automatic background refresh...
+[2025-10-10T19:12:45.766Z] Fetching latest incidents from backend...
+[2025-10-10T19:12:45.855Z] Clearing auto-refresh interval.
+[2025-10-10T19:12:45.855Z] Setting up auto-refresh for every 5 minutes.
+[2025-10-10T19:12:46.864Z] Successfully fetched 687 incidents.
+[2025-10-10T19:12:46.921Z] Clearing auto-refresh interval.
+[2025-10-10T19:12:47.003Z] Setting up auto-refresh for every 5 minutes.
+[2025-10-10T19:23:13.184Z] Performing automatic background refresh...
+[2025-10-10T19:23:13.184Z] Fetching latest incidents from backend...
+[2025-10-10T19:23:13.360Z] Clearing auto-refresh interval.
+[2025-10-10T19:23:13.360Z] Setting up auto-refresh for every 5 minutes.
+[2025-10-10T19:23:14.334Z] Successfully fetched 687 incidents.
+[2025-10-10T19:23:14.393Z] Clearing auto-refresh interval.
+[2025-10-10T19:23:14.442Z] Setting up auto-refresh for every 5 minutes.
+[2025-10-10T19:28:14.469Z] Performing automatic background refresh...
+[2025-10-10T19:28:14.469Z] Fetching latest incidents from backend...
+[2025-10-10T19:28:14.533Z] Clearing auto-refresh interval.
+[2025-10-10T19:28:14.533Z] Setting up auto-refresh for every 5 minutes.
+[2025-10-10T19:28:15.554Z] Successfully fetched 687 incidents.
+[2025-10-10T19:28:15.607Z] Clearing auto-refresh interval.
+[2025-10-10T19:28:15.669Z] Setting up auto-refresh for every 5 minutes.
+[2025-10-10T19:33:13.893Z] --- Manual Sync Triggered by User ---
+[2025-10-10T19:33:13.893Z] [OHGO] Fetching from: https://jarheads.net/fetch_ohgo.php
+[2025-10-10T19:33:13.893Z] [TEXAS] Fetching from: https://api.drivetexas.org/api/conditions.geojson
+[2025-10-10T19:33:13.917Z] Clearing auto-refresh interval.
+[2025-10-10T19:33:13.918Z] Setting up auto-refresh for every 5 minutes.
+[2025-10-10T19:33:14.304Z] [TEXAS] Received non-OK response body: Unauthorized
+[2025-10-10T19:33:14.304Z] [TEXAS] ERROR fetching or processing data: HTTP error 401. Response: Unauthorized This is an authentication error. Please verify that the API key in your server-side proxy script (e.g., fetch_texas.php) is correct and active.
+[2025-10-10T19:33:15.355Z] [OHGO] Raw API response received (New Schema).
+[2025-10-10T19:33:15.356Z] [OHGO] Successfully fetched and transformed 5 incidents.
+[2025-10-10T19:33:15.356Z] [IMPORTER] Total incidents transformed: 5. Posting to script: https://jarheads.net/importer.php
+[2025-10-10T19:33:15.672Z] [IMPORTER] Importer response: {"message":"Sync complete. Processed 5 incidents.","stats":{"total_received":5,"inserted":3,"updated":2,"failed":0}}
+[2025-10-10T19:33:15.672Z] Fetching latest incidents from backend...
+[2025-10-10T19:33:15.883Z] Clearing auto-refresh interval.
+[2025-10-10T19:33:15.883Z] Setting up auto-refresh for every 5 minutes.
+[2025-10-10T19:33:15.938Z] Successfully fetched 690 incidents.
+[2025-10-10T19:33:16.057Z] Clearing auto-refresh interval.
+[2025-10-10T19:33:16.111Z] Setting up auto-refresh for every 5 minutes.
+[2025-10-10T19:33:24.389Z] Fetching latest incidents from backend...
+[2025-10-10T19:33:24.407Z] Clearing auto-refresh interval.
+[2025-10-10T19:33:24.407Z] Setting up auto-refresh for every 5 minutes.
+[2025-10-10T19:33:24.786Z] Successfully fetched 690 incidents.
+[2025-10-10T19:33:24.842Z] Clearing auto-refresh interval.
+[2025-10-10T19:33:24.889Z] Setting up auto-refresh for every 5 minutes.
+[2025-10-10T19:38:25.763Z] Performing automatic background refresh...
+[2025-10-10T19:38:25.763Z] Fetching latest incidents from backend...
+[2025-10-10T19:38:25.814Z] Clearing auto-refresh interval.
+[2025-10-10T19:38:25.814Z] Setting up auto-refresh for every 5 minutes.
+[2025-10-10T19:38:26.965Z] Successfully fetched 690 incidents.
+[2025-10-10T19:38:27.031Z] Clearing auto-refresh interval.
+[2025-10-10T19:38:27.124Z] Setting up auto-refresh for every 5 minutes.
+[2025-10-11T13:44:54.501Z] Performing automatic background refresh...
+[2025-10-11T13:44:54.511Z] Fetching latest incidents from backend...
+[2025-10-11T13:44:54.768Z] Clearing auto-refresh interval.
+[2025-10-11T13:44:54.768Z] Setting up auto-refresh for every 5 minutes.
+[2025-10-11T13:44:55.961Z] Successfully fetched 690 incidents.
+[2025-10-11T13:44:56.017Z] Clearing auto-refresh interval.
+[2025-10-11T13:44:56.091Z] Setting up auto-refresh for every 5 minutes.
+[2025-10-11T13:56:44.494Z] Performing automatic background refresh...
+[2025-10-11T13:56:44.494Z] Fetching latest incidents from backend...
+[2025-10-11T13:56:44.562Z] Clearing auto-refresh interval.
+[2025-10-11T13:56:44.563Z] Setting up auto-refresh for every 5 minutes.
+[2025-10-11T13:56:45.165Z] Successfully fetched 690 incidents.
+[2025-10-11T13:56:45.217Z] Clearing auto-refresh interval.
+[2025-10-11T13:56:45.292Z] Setting up auto-refresh for every 5 minutes.
+[2025-10-11T14:01:45.486Z] Performing automatic background refresh...
+[2025-10-11T14:01:45.486Z] Fetching latest incidents from backend...
+[2025-10-11T14:01:45.537Z] Clearing auto-refresh interval.
+[2025-10-11T14:01:45.538Z] Setting up auto-refresh for every 5 minutes.
+[2025-10-11T14:01:46.586Z] Successfully fetched 690 incidents.
+[2025-10-11T14:01:46.650Z] Clearing auto-refresh interval.
+[2025-10-11T14:01:46.743Z] Setting up auto-refresh for every 5 minutes.
+[2025-10-11T14:06:47.492Z] Performing automatic background refresh...
+[2025-10-11T14:06:47.492Z] Fetching latest incidents from backend...
+[2025-10-11T14:06:47.547Z] Clearing auto-refresh interval.
+[2025-10-11T14:06:47.547Z] Setting up auto-refresh for every 5 minutes.
+[2025-10-11T14:06:48.565Z] Successfully fetched 690 incidents.
+[2025-10-11T14:06:48.628Z] Clearing auto-refresh interval.
+[2025-10-11T14:06:48.726Z] Setting up auto-refresh for every 5 minutes.
+[2025-10-11T14:11:49.484Z] Performing automatic background refresh...
+[2025-10-11T14:11:49.484Z] Fetching latest incidents from backend...
+[2025-10-11T14:11:49.540Z] Clearing auto-refresh interval.
+[2025-10-11T14:11:49.540Z] Setting up auto-refresh for every 5 minutes.
+[2025-10-11T14:11:50.589Z] Successfully fetched 690 incidents.
+[2025-10-11T14:11:50.651Z] Clearing auto-refresh interval.
+[2025-10-11T14:11:50.735Z] Setting up auto-refresh for every 5 minutes.
+[2025-10-11T14:16:51.475Z] Performing automatic background refresh...
+[2025-10-11T14:16:51.475Z] Fetching latest incidents from backend...
+[2025-10-11T14:16:51.533Z] Clearing auto-refresh interval.
+[2025-10-11T14:16:51.533Z] Setting up auto-refresh for every 5 minutes.
+[2025-10-11T14:16:52.642Z] Successfully fetched 690 incidents.
+[2025-10-11T14:16:52.709Z] Clearing auto-refresh interval.
+[2025-10-11T14:16:52.804Z] Setting up auto-refresh for every 5 minutes.
+[2025-10-11T14:21:53.483Z] Performing automatic background refresh...
+[2025-10-11T14:21:53.486Z] Fetching latest incidents from backend...
+[2025-10-11T14:21:53.535Z] Clearing auto-refresh interval.
+[2025-10-11T14:21:53.535Z] Setting up auto-refresh for every 5 minutes.
+[2025-10-11T14:21:54.610Z] Successfully fetched 690 incidents.
+[2025-10-11T14:21:54.671Z] Clearing auto-refresh interval.
+[2025-10-11T14:21:54.752Z] Setting up auto-refresh for every 5 minutes.
+[2025-10-11T14:23:43.878Z] Generating AI summary for incident: b6b0b3bf-38f1-43f9-8c81-f40e1def94ab
+[2025-10-11T14:23:51.336Z] --- Manual Sync Triggered by User ---
+[2025-10-11T14:23:51.337Z] [OHGO] Fetching from: https://jarheads.net/fetch_ohgo.php
+[2025-10-11T14:23:51.337Z] [TEXAS] Fetching from: https://api.drivetexas.org/api/conditions.geojson
+[2025-10-11T14:23:51.356Z] Clearing auto-refresh interval.
+[2025-10-11T14:23:51.356Z] Setting up auto-refresh for every 5 minutes.
+[2025-10-11T14:23:51.724Z] AI summary generated successfully for incident: b6b0b3bf-38f1-43f9-8c81-f40e1def94ab
+[2025-10-11T14:23:51.927Z] [TEXAS] Received non-OK response body: Unauthorized
+[2025-10-11T14:23:51.927Z] [TEXAS] ERROR fetching or processing data: HTTP error 401. Response: Unauthorized This is an authentication error. Please verify that the API key in your server-side proxy script (e.g., fetch_texas.php) is correct and active.
+[2025-10-11T14:23:52.288Z] [OHGO] Raw API response received (New Schema).
+[2025-10-11T14:23:52.288Z] [OHGO] Successfully fetched and transformed 4 incidents.
+[2025-10-11T14:23:52.288Z] [IMPORTER] Total incidents transformed: 4. Posting to script: https://jarheads.net/importer.php
+[2025-10-11T14:23:52.629Z] [IMPORTER] Importer response: {"message":"Sync complete. Processed 4 incidents.","stats":{"total_received":4,"inserted":4,"updated":0,"failed":0}}
+[2025-10-11T14:23:52.629Z] Fetching latest incidents from backend...
+[2025-10-11T14:23:52.680Z] Clearing auto-refresh interval.
+[2025-10-11T14:23:52.745Z] Setting up auto-refresh for every 5 minutes.
+[2025-10-11T14:23:54.146Z] Successfully fetched 694 incidents.
+[2025-10-11T14:23:54.264Z] Clearing auto-refresh interval.
+[2025-10-11T14:23:54.306Z] Setting up auto-refresh for every 5 minutes.
+[2025-10-11T14:24:00.789Z] Fetching latest incidents from backend...
+[2025-10-11T14:24:00.808Z] Clearing auto-refresh interval.
+[2025-10-11T14:24:00.808Z] Setting up auto-refresh for every 5 minutes.
+[2025-10-11T14:24:01.279Z] Successfully fetched 694 incidents.
+[2025-10-11T14:24:01.333Z] Clearing auto-refresh interval.
+[2025-10-11T14:24:01.377Z] Setting up auto-refresh for every 5 minutes.
+[2025-10-11T14:27:03.184Z] Fetching latest incidents from backend...
+[2025-10-11T14:27:03.185Z] Setting up auto-refresh for every 5 minutes.
+[2025-10-11T14:27:04.494Z] Successfully fetched 694 incidents.
+[2025-10-11T14:27:05.115Z] Clearing auto-refresh interval.
+[2025-10-11T14:27:05.167Z] Setting up auto-refresh for every 5 minutes.
+[2025-10-11T14:27:37.668Z] Generating AI summary for incident: ede60033-0242-4677-aab0-d73b1d7354ff
+[2025-10-11T14:27:38.769Z] Generating AI summary for incident: 35e463da-da96-41f5-8e40-96dfb6e12ebf
+[2025-10-11T14:27:46.195Z] AI summary generated successfully for incident: ede60033-0242-4677-aab0-d73b1d7354ff
+[2025-10-11T14:27:47.469Z] AI summary generated successfully for incident: 35e463da-da96-41f5-8e40-96dfb6e12ebf
+[2025-10-11T14:30:00.481Z] Fetching latest incidents from backend...
+[2025-10-11T14:30:00.485Z] Clearing auto-refresh interval.
+[2025-10-11T14:30:00.494Z] Setting up auto-refresh for every 5 minutes.
+[2025-10-11T14:30:01.247Z] Successfully fetched 694 incidents.
+[2025-10-11T14:30:01.253Z] Clearing auto-refresh interval.
+[2025-10-11T14:30:01.257Z] Setting up auto-refresh for every 5 minutes.
+[2025-10-11T14:30:07.964Z] Generating AI summary for incident: DriveTexas_Official-AF3641EB-F50B-4256-8D95-B1159559DCED
+[2025-10-11T14:30:19.150Z] AI summary generated successfully for incident: DriveTexas_Official-AF3641EB-F50B-4256-8D95-B1159559DCED
+[2025-10-11T14:44:57.676Z] Fetching latest incidents from backend...
+[2025-10-11T14:44:57.677Z] Setting up auto-refresh for every 5 minutes.
+[2025-10-11T14:44:58.347Z] Successfully fetched 694 incidents.
+[2025-10-11T14:44:58.994Z] Clearing auto-refresh interval.
+[2025-10-11T14:44:59.034Z] Setting up auto-refresh for every 5 minutes.
+[2025-10-11T14:45:06.421Z] Fetching latest incidents from backend...
+[2025-10-11T14:45:06.421Z] Setting up auto-refresh for every 5 minutes.
+[2025-10-11T14:45:06.959Z] Successfully fetched 694 incidents.
+[2025-10-11T14:45:07.532Z] Clearing auto-refresh interval.
+[2025-10-11T14:45:07.573Z] Setting up auto-refresh for every 5 minutes.

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b9c1218f-491f-48a8-ae51-d8d3a9381551" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/App.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai-traffic-incident-analyst (2).zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai_studio_code.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/CustomDropdown.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/DebugPane.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/ErrorMessage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/FeedbackModal.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/FilterControls.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Header.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/HistoryList.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Icons.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/IncidentCard.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/IncidentDetail.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/IncidentList.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/IncidentMap.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/LocationPermissionBanner.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/LogViewerModal.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/NotificationToast.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Spinner.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example.kml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fetch_pa.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/get_incidents.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hooks/useLocation.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hooks/usePrevious.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/importer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nbproject/private/private.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nbproject/private/private.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nbproject/project.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nbproject/project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scheduler.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/api.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/geminiService.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/importer.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/mockData.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_pa_connection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/location.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/logger.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/mapIcons.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/time.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vite.config.ts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 4
+}]]></component>
+  <component name="ProjectId" id="33kDr9xFcDL5N5HNEW2wodKk0CI" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/canadytw/PycharmProjects/ai-traffic-incident-analyst"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-164cda30dcd9-0af03a5fa574-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-252.26830.99" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b9c1218f-491f-48a8-ae51-d8d3a9381551" name="Changes" comment="" />
+      <created>1759852372262</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1759852372262</updated>
+    </task>
+    <servers />
+  </component>
+</project>
