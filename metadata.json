@@ -1,0 +1,7 @@
+{
+  "name": "AI Traffic Incident Analyst",
+  "description": "An intelligent dashboard that displays and analyzes traffic incident data from various sources. It uses AI to provide insightful summaries and context for each event.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}

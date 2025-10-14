@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Traffic Incident Analyst</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'brand-primary': '#1e40af',
+              'brand-secondary': '#3b82f6',
+              'brand-light': '#dbeafe',
+              'brand-dark': '#1e3a8a',
+              'status-red': '#dc2626',
+              'status-yellow': '#facc15',
+              'status-green': '#22c55e',
+            },
+            animation: {
+              'pulse-fast': 'pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            }
+          }
+        }
+      }
+    </script>
+  <style>
+    /* Custom Marker Cluster Styles for Severity */
+    .marker-cluster-critical { background-color: rgba(220, 38, 38, 0.8); border-color: rgba(220, 38, 38, 0.5); }
+    .marker-cluster-high { background-color: rgba(249, 115, 22, 0.8); border-color: rgba(249, 115, 22, 0.5); }
+    .marker-cluster-medium { background-color: rgba(250, 204, 21, 0.8); border-color: rgba(250, 204, 21, 0.5); }
+    .marker-cluster-low { background-color: rgba(59, 130, 246, 0.8); border-color: rgba(59, 130, 246, 0.5); }
+    .marker-cluster-roadwork { background-color: rgba(100, 116, 139, 0.8); border-color: rgba(100, 116, 139, 0.5); }
+
+    .marker-cluster {
+      background-clip: padding-box;
+      border-radius: 50%;
+      border: 3px solid rgba(255, 255, 255, 0.5);
+    }
+    .marker-cluster div {
+      width: 30px;
+      height: 30px;
+      margin-left: 5px;
+      margin-top: 5px;
+      color: #fff;
+      text-align: center;
+      border-radius: 50%;
+      font: 12px "Helvetica Neue", Arial, Helvetica, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    }
+  </style>
+  <script>
+    // --- 🛑 ACTION REQUIRED 🛑 ---
+    // The AI Summary feature requires a valid Google Gemini API key.
+    // 1. Get your key from Google AI Studio: https://aistudio.google.com/app/apikey
+    // 2. Paste your key below to replace the 'YOUR_GEMINI_API_KEY_HERE' placeholder.
+    // The application will not be able to generate AI summaries until you do this.
+    window.process = {
+      env: {
+        API_KEY: 'YOUR_GEMINI_API_KEY_HERE'
+      }
+    };
+  </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.22.0",
+    "uuid": "https://aistudiocdn.com/uuid@^13.0.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
