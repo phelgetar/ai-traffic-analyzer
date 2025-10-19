@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b9c1218f-491f-48a8-ae51-d8d3a9381551" name="Changes" comment="feat(filters): Implement persistent filter settings&#10;The application now automatically saves the current filter state to the browser's localStorage.&#10;When the app is reloaded, it restores the previously used filters, providing a more seamless and personalized user experience.&#10;Files Changed: App.tsx&#10;feat(ui): Add distinct category icons to detail panel&#10;Enhanced the IncidentDetail component to display a unique icon (e.g., roadwork cone vs. car crash) in the header.&#10;This provides immediate visual context for the incident type, making it consistent with the icons already present in the main incident list.&#10;Files Changed: components/IncidentDetail.tsx&#10;docs(readme): Update documentation with latest features&#10;Updated the README.md file to include the new &quot;Persistent UI Settings&quot; and &quot;Distinct Category Icons&quot; in the Core Features list.&#10;This ensures the project documentation accurately reflects the current state of the application.&#10;Files Changed: README.md" />
+    <list default="true" id="b9c1218f-491f-48a8-ae51-d8d3a9381551" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,24 +21,24 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "phelgetar"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;phelgetar&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/phelgetar/ai-traffic-analyzer",
-    "accountId": "4d189769-d13e-473e-8f1f-286b55232d48"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/phelgetar/ai-traffic-analyzer&quot;,
+    &quot;accountId&quot;: &quot;4d189769-d13e-473e-8f1f-286b55232d48&quot;
   }
-}]]></component>
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="33kDr9xFcDL5N5HNEW2wodKk0CI" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -46,6 +48,7 @@
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
     "last_opened_file_path": "/Users/canadytw/PycharmProjects/ai-traffic-incident-analyst"
   }
