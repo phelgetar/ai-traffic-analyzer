@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b9c1218f-491f-48a8-ae51-d8d3a9381551" name="Changes" comment="">
+    <list default="true" id="b9c1218f-491f-48a8-ae51-d8d3a9381551" name="Changes" comment="workspace updated">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -19,6 +19,12 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -44,15 +50,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/canadytw/PycharmProjects/ai-traffic-incident-analyst"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/canadytw/PycharmProjects/ai-traffic-incident-analyst&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -85,11 +91,20 @@
       <option name="project" value="LOCAL" />
       <updated>1760472911460</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="workspace updated">
+      <option name="closed" value="true" />
+      <created>1760834124001</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1760834124001</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat(filters): Implement persistent filter settings&#10;The application now automatically saves the current filter state to the browser's localStorage.&#10;When the app is reloaded, it restores the previously used filters, providing a more seamless and personalized user experience.&#10;Files Changed: App.tsx&#10;feat(ui): Add distinct category icons to detail panel&#10;Enhanced the IncidentDetail component to display a unique icon (e.g., roadwork cone vs. car crash) in the header.&#10;This provides immediate visual context for the incident type, making it consistent with the icons already present in the main incident list.&#10;Files Changed: components/IncidentDetail.tsx&#10;docs(readme): Update documentation with latest features&#10;Updated the README.md file to include the new &quot;Persistent UI Settings&quot; and &quot;Distinct Category Icons&quot; in the Core Features list.&#10;This ensures the project documentation accurately reflects the current state of the application.&#10;Files Changed: README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(filters): Implement persistent filter settings&#10;The application now automatically saves the current filter state to the browser's localStorage.&#10;When the app is reloaded, it restores the previously used filters, providing a more seamless and personalized user experience.&#10;Files Changed: App.tsx&#10;feat(ui): Add distinct category icons to detail panel&#10;Enhanced the IncidentDetail component to display a unique icon (e.g., roadwork cone vs. car crash) in the header.&#10;This provides immediate visual context for the incident type, making it consistent with the icons already present in the main incident list.&#10;Files Changed: components/IncidentDetail.tsx&#10;docs(readme): Update documentation with latest features&#10;Updated the README.md file to include the new &quot;Persistent UI Settings&quot; and &quot;Distinct Category Icons&quot; in the Core Features list.&#10;This ensures the project documentation accurately reflects the current state of the application.&#10;Files Changed: README.md" />
+    <MESSAGE value="workspace updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="workspace updated" />
   </component>
 </project>
