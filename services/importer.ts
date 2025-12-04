@@ -150,6 +150,11 @@ const transformTomTomData = (data: any[]): IncidentPayload[] => {
             const uuid = uuidv5(`TOMTOM-${sourceId}`, UUID_NAMESPACE);
             const iconCategory = props.iconCategory;
 
+            // Determine active status
+            const now = new Date();
+            const endTime = props.endTime ? new Date(props.endTime) : null;
+            const isActive = !endTime || endTime > now;
+
             return {
                 uuid,
                 source_system: 'TomTom_USA',
@@ -164,7 +169,7 @@ const transformTomTomData = (data: any[]): IncidentPayload[] => {
                 reported_time: toMySqlDateTime(props.startTime),
                 updated_time: toMySqlDateTime(props.startTime), // Use startTime as best proxy
                 cleared_time: props.endTime ? toMySqlDateTime(props.endTime) : null,
-                is_active: 1, // API returns currently active incidents
+                is_active: isActive ? 1 : 0,
                 event_type: eventTypeMap[iconCategory] || 'Unknown Event',
                 lanes_affected: props.aci?.description || `From ${props.from} to ${props.to}`,
                 closure_status: iconCategory === 8 ? 'CLOSED' : (iconCategory === 7 ? 'PARTIAL' : 'UNKNOWN'),
@@ -416,10 +421,23 @@ const transformDriveTexasData = (data: any): IncidentPayload[] => {
             const [longitude, latitude] = coordinates;
 
             const uuid = uuidv5(`TX-${sourceId}`, UUID_NAMESPACE);
-            
-            // Determine active status from end_time.
+
+            // Determine active status from end_time and start_time.
+            const now = new Date();
+            const startTime = props.start_time ? new Date(props.start_time) : null;
             const endTime = props.end_time ? new Date(props.end_time) : null;
-            const isActive = !endTime || endTime > new Date();
+
+            // An incident is active if:
+            // 1. It has started (start_time is in the past or null)
+            // 2. It hasn't ended yet (end_time is null OR end_time is in the future)
+            let isActive = true;
+            if (endTime && endTime <= now) {
+                // Has an end time that's already passed - it's cleared
+                isActive = false;
+            } else if (startTime && startTime > now) {
+                // Hasn't started yet - not active
+                isActive = false;
+            }
 
             let closureStatus: IncidentPayload['closure_status'] = 'UNKNOWN';
             const descriptionLower = (props.description || '').toLowerCase();
