@@ -136,9 +136,16 @@ const transformTomTomData = (data: any[]): IncidentPayload[] => {
     const transformed = uniqueFeatures.map((feature: any): IncidentPayload | null => {
         try {
             const props = feature.properties;
-            if (!props || !props.id || !feature.geometry?.coordinates) return null;
-            
-            const [longitude, latitude] = feature.geometry.coordinates;
+            if (!props || !props.id) return null;
+
+            // Extract and validate coordinates
+            const coordinates = extractRepresentativePoint(feature.geometry);
+            if (!coordinates) {
+                logger.log(`[TOMTOM] Skipping incident ${props.id}: no valid coordinates`);
+                return null;
+            }
+            const [longitude, latitude] = coordinates;
+
             const sourceId = String(props.id);
             const uuid = uuidv5(`TOMTOM-${sourceId}`, UUID_NAMESPACE);
             const iconCategory = props.iconCategory;
@@ -199,8 +206,17 @@ const transformOhgoData = (data: any): IncidentPayload[] => {
             }
 
             const sourceId = String(incident.id);
+
+            // Validate coordinates
+            const lat = incident.location.latitude;
+            const lon = incident.location.longitude;
+            if (!isValidCoordinate(lat, lon)) {
+                logger.log(`[OHGO] Skipping incident ${sourceId}: invalid coordinates [${lon}, ${lat}]`);
+                return null;
+            }
+
             const uuid = uuidv5(`OHGO-${sourceId}`, UUID_NAMESPACE);
-            
+
             // The authenticated API provides a 'clearedTime' field.
             const clearedTime = incident.clearedTime || null;
             const isActive = !clearedTime || new Date(clearedTime) > new Date();
@@ -222,8 +238,8 @@ const transformOhgoData = (data: any): IncidentPayload[] => {
                 route: incident.roadwayName || 'Unknown Route',
                 direction: incident.direction || null,
                 milepost: incident.mileMarker ? parseFloat(incident.mileMarker) : null,
-                latitude: incident.location.latitude,
-                longitude: incident.location.longitude,
+                latitude: lat,
+                longitude: lon,
                 reported_time: toMySqlDateTime(incident.startTime),
                 updated_time: toMySqlDateTime(incident.lastUpdatedTime || incident.startTime),
                 cleared_time: toMySqlDateTime(clearedTime),
@@ -245,7 +261,134 @@ const transformOhgoData = (data: any): IncidentPayload[] => {
     return transformed;
 };
 
+/**
+ * Validates coordinates to ensure they represent a real location.
+ * Filters out placeholder/invalid values like (1.0, 1.0) or coordinates outside valid ranges.
+ */
+const isValidCoordinate = (latitude: number, longitude: number): boolean => {
+    // Check for obvious placeholder values
+    if (Math.abs(latitude - 1.0) < 0.0001 && Math.abs(longitude - 1.0) < 0.0001) {
+        return false;
+    }
+    if (latitude === 0 && longitude === 0) {
+        return false;
+    }
+
+    // Check if coordinates are within valid ranges
+    // US latitude: roughly 24°N to 50°N, longitude: roughly -125°W to -66°W
+    if (latitude < 24 || latitude > 50) return false;
+    if (longitude < -125 || longitude > -66) return false;
+
+    return true;
+};
+
+/**
+ * Extracts a representative point from various GeoJSON geometry types.
+ * For LineString geometries (multi-mile roadwork), calculates the midpoint.
+ * Returns [longitude, latitude] or null if unable to extract valid coordinates.
+ */
+const extractRepresentativePoint = (geometry: any): [number, number] | null => {
+    if (!geometry || !geometry.type || !geometry.coordinates) {
+        return null;
+    }
+
+    try {
+        switch (geometry.type) {
+            case 'Point': {
+                const [lon, lat] = geometry.coordinates;
+                if (typeof lon === 'number' && typeof lat === 'number' && isValidCoordinate(lat, lon)) {
+                    return [lon, lat];
+                }
+                return null;
+            }
+
+            case 'LineString': {
+                // For road segments, calculate the midpoint of the line
+                const coords = geometry.coordinates;
+                if (!Array.isArray(coords) || coords.length === 0) return null;
+
+                // Try to find a valid coordinate pair from the line
+                // First, try the middle point
+                const midIndex = Math.floor(coords.length / 2);
+                const [midLon, midLat] = coords[midIndex];
+                if (isValidCoordinate(midLat, midLon)) {
+                    logger.log(`[TEXAS] Using midpoint of LineString (${coords.length} points) at [${midLon}, ${midLat}]`);
+                    return [midLon, midLat];
+                }
+
+                // If midpoint is invalid, try to find the first valid coordinate
+                for (const coord of coords) {
+                    const [lon, lat] = coord;
+                    if (isValidCoordinate(lat, lon)) {
+                        logger.log(`[TEXAS] Using first valid point of LineString at [${lon}, ${lat}]`);
+                        return [lon, lat];
+                    }
+                }
+
+                // If we can't find any valid coordinates, calculate centroid as fallback
+                let sumLon = 0, sumLat = 0, validCount = 0;
+                for (const coord of coords) {
+                    const [lon, lat] = coord;
+                    if (typeof lon === 'number' && typeof lat === 'number') {
+                        sumLon += lon;
+                        sumLat += lat;
+                        validCount++;
+                    }
+                }
+                if (validCount > 0) {
+                    const centroidLon = sumLon / validCount;
+                    const centroidLat = sumLat / validCount;
+                    if (isValidCoordinate(centroidLat, centroidLon)) {
+                        logger.log(`[TEXAS] Calculated centroid of LineString at [${centroidLon}, ${centroidLat}]`);
+                        return [centroidLon, centroidLat];
+                    }
+                }
+
+                logger.log(`[TEXAS] LineString has no valid coordinates, skipping`);
+                return null;
+            }
+
+            case 'MultiLineString': {
+                // For multi-line segments, use the first LineString's representative point
+                const lines = geometry.coordinates;
+                if (!Array.isArray(lines) || lines.length === 0) return null;
+
+                // Try each line until we find one with valid coordinates
+                for (const line of lines) {
+                    const point = extractRepresentativePoint({ type: 'LineString', coordinates: line });
+                    if (point) return point;
+                }
+                return null;
+            }
+
+            case 'Polygon':
+            case 'MultiPolygon': {
+                // For polygons (rare for traffic data), use the first coordinate of the outer ring
+                let coords = geometry.type === 'Polygon'
+                    ? geometry.coordinates[0]
+                    : geometry.coordinates[0]?.[0];
+
+                if (coords && coords.length > 0) {
+                    const [lon, lat] = coords[0];
+                    if (isValidCoordinate(lat, lon)) {
+                        return [lon, lat];
+                    }
+                }
+                return null;
+            }
+
+            default:
+                logger.log(`[TEXAS] Unknown geometry type: ${geometry.type}`);
+                return null;
+        }
+    } catch (error: any) {
+        logger.log(`[TEXAS] Error extracting coordinates from geometry: ${error.message}`);
+        return null;
+    }
+};
+
 // FIX: This function has been completely rewritten to match the data schema from the user's logs (using GLOBALID, route_name, etc.).
+// ENHANCEMENT: Added support for LineString geometries and coordinate validation to handle multi-mile roadwork properly.
 const transformDriveTexasData = (data: any): IncidentPayload[] => {
     const incidents = data?.features || [];
     if (!Array.isArray(incidents)) {
@@ -264,8 +407,13 @@ const transformDriveTexasData = (data: any): IncidentPayload[] => {
                 return null;
             }
 
-            if (!feature.geometry?.coordinates) return null;
-            const [longitude, latitude] = feature.geometry.coordinates;
+            // Extract representative point from geometry (handles Point, LineString, etc.)
+            const coordinates = extractRepresentativePoint(feature.geometry);
+            if (!coordinates) {
+                logger.log(`[TEXAS] Skipping incident ${sourceId}: no valid coordinates`);
+                return null;
+            }
+            const [longitude, latitude] = coordinates;
 
             const uuid = uuidv5(`TX-${sourceId}`, UUID_NAMESPACE);
             
