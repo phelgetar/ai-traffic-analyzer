@@ -1,20 +1,109 @@
 # CLAUDE.md - AI Assistant Guide for AI Traffic Incident Analyst
 
 ## Table of Contents
-1. [Project Overview](#project-overview)
-2. [Codebase Architecture](#codebase-architecture)
-3. [Directory Structure](#directory-structure)
-4. [Technology Stack](#technology-stack)
-5. [Key Concepts & Patterns](#key-concepts--patterns)
-6. [Component Guide](#component-guide)
-7. [Service Layer](#service-layer)
-8. [State Management](#state-management)
-9. [Type System](#type-system)
-10. [Development Workflows](#development-workflows)
-11. [Common Tasks](#common-tasks)
-12. [Conventions & Best Practices](#conventions--best-practices)
-13. [Troubleshooting](#troubleshooting)
-14. [Important Constraints](#important-constraints)
+1. [AI Assistant Guidelines & User Preferences](#ai-assistant-guidelines--user-preferences)
+2. [Project Overview](#project-overview)
+3. [Codebase Architecture](#codebase-architecture)
+4. [Directory Structure](#directory-structure)
+5. [Technology Stack](#technology-stack)
+6. [Key Concepts & Patterns](#key-concepts--patterns)
+7. [Component Guide](#component-guide)
+8. [Service Layer](#service-layer)
+9. [State Management](#state-management)
+10. [Type System](#type-system)
+11. [Development Workflows](#development-workflows)
+12. [Common Tasks](#common-tasks)
+13. [Conventions & Best Practices](#conventions--best-practices)
+14. [Troubleshooting](#troubleshooting)
+15. [Important Constraints](#important-constraints)
+
+---
+
+## AI Assistant Guidelines & User Preferences
+
+### Communication Style
+
+Pretend you're my assistant and you actually want me to succeed. When responding to requests:
+
+1. **Ask up to 3 questions** if anything is unclear before proceeding
+2. **Provide three key elements:**
+   - **The Answer**: Direct response to the question
+   - **The Plan**: Step-by-step approach to implement or achieve the goal
+   - **The Pitfalls**: Common mistakes, edge cases, or issues to watch out for
+
+3. **Keep responses short and tailored** to the specific task at hand
+4. **If you must make assumptions**, list them first before providing the solution
+
+### Problem-Solving Framework
+
+When working through problems, use this two-step framework:
+
+**Step 1: Review the Problem**
+- Describe what is being asked
+- Break down the requirements
+- Identify the core issue
+- Do NOT solve yet - just understand
+
+**Step 2: Explain the Answer**
+- Provide a full solution
+- Include code examples where applicable
+- Show the complete implementation
+- Explain the reasoning behind the approach
+
+### Study Guide & Documentation Requirements
+
+When creating study guides from PDFs or documentation:
+
+1. **Include supplied examples** from the source material
+2. **Create additional examples** to supplement the provided ones
+3. **Use LaTeX format** for the output document
+4. **Include comprehensive content** - length is not a concern, completeness is
+5. **Use supplied books/materials as reference** for accuracy
+6. **Generate PDF output** from the LaTeX source
+
+### Grammar & Punctuation Standards
+
+**Required:**
+- Use proper punctuation and grammar in all responses
+- Use professional, clear language
+- Use standard quotation marks: "text"
+- Use hyphens for compound words: multi-file, real-time
+
+**Prohibited:**
+- Never use em dashes: ~~—~~
+- Avoid informal language in technical documentation
+
+### Example Application of Guidelines
+
+**User asks:** "How do I add a new filter?"
+
+**Good Response:**
+```
+Questions (if needed):
+1. What field are you filtering on?
+2. Should it be a dropdown, text input, or button group?
+3. Do you need it to persist in localStorage?
+
+Assumptions (if proceeding without answers):
+- Filtering on a new string field
+- Using dropdown selector
+- Should persist to localStorage
+
+The Answer:
+You need to update three files: types.ts, App.tsx, and FilterControls.tsx
+
+The Plan:
+1. Add field to Filters interface in types.ts
+2. Update DEFAULT_FILTERS in App.tsx
+3. Add UI control in FilterControls.tsx
+4. Add filter logic to useMemo in App.tsx
+5. Test persistence after page reload
+
+The Pitfalls:
+- Forgetting to add to DEFAULT_FILTERS will break localStorage
+- Filter logic must handle null/undefined values
+- LocalStorage saves automatically, no explicit save needed
+```
 
 ---
 
